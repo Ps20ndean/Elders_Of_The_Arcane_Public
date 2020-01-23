@@ -17,8 +17,8 @@ public class Lava : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // kills the player on touching the lava
-            player.GetComponent<HealthManager>().health = 0;
-            
+            player.GetComponent<HealthManager>().Damage(250);
+
             // runs the dead method upon dying
             playerComp.Dead();
         }
